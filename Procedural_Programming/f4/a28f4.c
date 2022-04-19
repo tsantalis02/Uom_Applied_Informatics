@@ -1,3 +1,10 @@
+/*
+File:a28f4.c
+    Να γράψετε πρόγραμμα που θα διαβάζει τον κωδικό και την τιμή ενός αγνώστου πλήθους προϊόντων που
+    αγόρασε κάποιος σε ένα πολυκατάστημα. Ο κωδικός θα πρέπει να είναι στο διάστημα [0..2000] και να γίνεται ο
+    αντίστοιχος έλεγχος από το πρόγραμμα. Η είσοδος των δεδομένων (κωδικός και τιμή) θα συνεχίζεται μέχρι να
+    δοθεί ως κωδικός το μηδέν.
+*/
 #include <stdio.h>
 #include "genlib.h"
 #include "simpio.h"
@@ -8,12 +15,12 @@ double discount_percentage(int code);
 int product_points (int code, double price);
 
 int main (){
-int code,points,total_points;
-double price,discount,total_discount,final_price,total;
-total_discount=0;
-total=0;
-total_points=0;
-code=getcode();
+ int code,points,total_points;
+ double price,discount,total_discount,final_price,total;
+ total_discount=0;
+ total=0;
+ total_points=0;
+ code=getcode();
  while (code!=0){
   printf("Dwse timh:");
   price=GetReal();
@@ -32,7 +39,7 @@ printf("Pontoi: %d\n",total_points);
 return 0;}
 
 int getcode(){
-int code;
+ int code;
  while (TRUE){
    printf("Dwse ton kwdiko :");
    code=GetInteger();
@@ -40,7 +47,7 @@ int code;
     return code;
    }
    printf ("Lathos Kwdikos [0-2000]\n");
- }
+  }
 }
 
 double discount_percentage(int code){
@@ -54,7 +61,8 @@ double discount_percentage(int code){
     }else{
        result=0.2;
     }
-return result;}
+ return result;
+}
 
 int product_points(int code,double price){
     int points;
