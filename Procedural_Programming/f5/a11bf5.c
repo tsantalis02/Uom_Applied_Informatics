@@ -15,26 +15,25 @@ void CalculateMaxDeviation(double natavg,int row,int col,double temper [row][col
 void Print_Results(double natavg,int row,int col,double average[row],double mdeviation[row]);
 
  int main(){
- double temper[CTS][S],natavg,average[CTS],mdeviation[CTS];
-
-
- ReadData(CTS,S,temper);
- natavg=CalculateAverage(CTS,S,temper);
- CalculateAvCity(CTS,S,temper,average);
- CalculateMaxDeviation(natavg,CTS,S,temper,mdeviation);
- Print_Results(natavg,CTS,S,average,mdeviation);
-
-
- return 0;}
+ 
+  double temper[CTS][S],natavg,average[CTS],mdeviation[CTS];
+  ReadData(CTS,S,temper);
+  natavg=CalculateAverage(CTS,S,temper);
+  CalculateAvCity(CTS,S,temper,average);
+  CalculateMaxDeviation(natavg,CTS,S,temper,mdeviation);
+  Print_Results(natavg,CTS,S,average,mdeviation);
+  return 0;
+ }
 
 void ReadData(int row,int col,double temper[row][col]){
  int i,j;
- for (i=0; i<row; i++)
+ for (i=0; i<row; i++){
 		for (j=0; j<col; j++)
 		  	{ printf("Temp of City %d During %d 8-hour period: ",i,j);
               temper[i][j] = GetReal();
               }
- }
+ }	 
+}
 
 
 double CalculateAverage(int row,int col,double temper[row][col]){
@@ -46,7 +45,8 @@ double CalculateAverage(int row,int col,double temper[row][col]){
       for (j=0; j<col; j+=1)
          natavg += temper[i][j];
     natavg = natavg/(row*col);
-return natavg;}
+ return natavg;
+}
 
 void CalculateAvCity(int row,int col,double temper[row][col],double average[row]){
  int i,j;
