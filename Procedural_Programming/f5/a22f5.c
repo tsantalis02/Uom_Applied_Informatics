@@ -1,3 +1,6 @@
+/*
+File:a22f5.c
+*/
 #include <stdio.h>
 #include "genlib.h"
 #include "simpio.h"
@@ -8,27 +11,29 @@
 long long GetLongLong();
 
 int main(){
-long long num, l ;
-int i ,A[x] , n ,  p , B[x] , s , p1, p2;
-printf("Insert card number:");
-num= GetLongLong();
-if (num>=10000000000000000 || num<1000000000000000)
-{
+ long long num, l ;
+ int i ,A[x] , n ,  p , B[x] , s , p1, p2;
+ /*Εισαγωγή κάρτας*/   
+ printf("Insert card number:");
+ num= GetLongLong();
+ /*Έλεγχος εάν δεν εισαχθούν 16 ψηφία*/   
+ if (num>=10000000000000000 || num<1000000000000000)
+ {
     printf("%lld  is invalid.", num);
-}
-else
-   {
+ }
+ else
+ {
 
     n=15;
     l = num;
-
+  /*Καταχώριση της κάρτας στον πίνακα*/
   for(i=1; i<=x; i++)
     {   p=l %10;
         l=l /10;
         A[n]=p;
         n=n-1;
     }
-
+      /*Έλεγχος εάν το 1ο ψηφίο είναι μικρότερο από 4 και μεγαλύτερο από 7 */
         if (A[0] < 4 ||  A[0]>7)
         {
             printf("%lld  is invalid.", num );
@@ -42,7 +47,7 @@ else
           s=0;
           for(i=0; i<x; i+=2)
           {
-            B[i]=2*B[i];
+            B[i]=2*B[i];//Διπλασιασμός του ψηφίου
             if(B[i]>=10)
             {
              p1= B[i]/10;
@@ -68,7 +73,8 @@ else
      }
 }
 
-return 0;}
+return 0;
+}
 
 
 
