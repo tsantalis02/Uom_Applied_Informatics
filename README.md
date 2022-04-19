@@ -1,2 +1,3 @@
 # Uom_Applied_Informatics
-University projects
+University assingments,projects,etc.
+
