@@ -1,3 +1,20 @@
+/*
+File:a2f9.c
+    Δίνεται το αρχείο κειμένου ‘i2f9.dat’ των μαθητών ενός σχολείου που περιλαμβάνει τα εξής στοιχεία για κάθε μαθητή:
+    * ονοματεπώνυμο μαθητή, το οποίο δεν μπορεί να περιλαμβάνει περισσότερους από 30 χαρακτήρες
+    * αριθμός απουσιών (int)
+    * διάφορα στοιχεία μαθητή, τα οποία δεν μπορούν να ξεπερνάνε τους 68 χαρακτήρες
+    Τα παραπάνω στοιχεία για κάθε μαθητή χωρίζονται με κόμμα.
+    Ζητείται να γίνει πρόγραμμα που να δημιουργεί αρχείο μαθητών με απουσίες άνω των 100. Το πρόγραμμα
+    θα ζητά τα ονόματα των αρχείων "εισόδου" (i2f9.dat) και "εξόδου" (o2f9.dat) από τον χρήστη. Από
+    το αρχείο μαθητών ‘i2f9.dat’ θα δημιουργείται το αρχείο κειμένου ‘o2f9.dat’ που θα περιέχει το
+    ονοματεπώνυμο (30 χαρακτήρες) και τον αριθμό απουσιών (int) κάθε μαθητή που οι απουσίες του
+    ξεπερνούν τις 100. Τέλος, θα περιέχει το πλήθος όλων των μαθητών του σχολείου καθώς και το πλήθος των
+    μαθητών του σχολείου που οι απουσίες τους ξεπερνούν τις 100. H εμφάνιση θα ακολουθεί στοίχιση με την
+    παρακάτω μορφή:
+    Το αρχείο i2f9.dat σας δίνεται και είναι το παρακάτω.
+    Το αρχείο o2f9.dat που θα δημιουργηθεί
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -29,14 +46,18 @@ int main(){
    studentT students[M];
    int numberofStudents,numberofApousies;
    readInput(infile,students,&numberofApousies,&numberofStudents);
+    
+  /* Υπολογισμοί - Έξοδος σε αρχείο */ 
    writeOutput(stdout,numberofApousies,students,numberofStudents);
 
+ /* Κλείσιμο αρχείων */   
    fclose(infile);
    fclose(outfile);
 
   return 0;
 }
 
+/* Συνάρτηση ανάγνωσης δεδομένω πηγαίου αρχείου */
 void readInput(FILE* infile,studentT students[],int *pApousies,int *pStudents){
   int nscan,apousies,line;
   char name[30],comments[68],termch;
@@ -62,6 +83,7 @@ void readInput(FILE* infile,studentT students[],int *pApousies,int *pStudents){
   }
 }
 
+/* Συνάρτηση εξαγωγής επεξεργασμένων δεδομένων σε αρχείο */
  void writeOutput(FILE* outfile,int size,studentT students[],int total){
    int i;
 
