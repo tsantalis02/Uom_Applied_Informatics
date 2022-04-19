@@ -1,19 +1,31 @@
+/*
+File:a13f3.c
+Να γραφεί πρόγραμμα που ζητά από τον χρήστη έναν ακέραιο Ν (όριο) και υπολογίζει το άθροισμα των Ν κλασμάτων
+	∑ ( 1/ x ) , δηλαδή 1/1+1/2+1/3+...+1/Ν
+   (προσοχή στις μετατροπές τύπων, το άθροισμα είναι τύπου float). Θεωρείστε ότι ο χρήστης εισάγει πάντα
+   έναν ακέραιο μεγαλύτερο ή ίσο του 1 (δεν απαιτείται έλεγχος).
+   Το αποτέλεσμα να εμφανιστεί με ακρίβεια 2 δεκαδικών ψηφίων.
+*/
 #include <stdio.h>
 #include "genlib.h"
 #include "simpio.h"
 #include <math.h>
 
 int main(){
-int n,i;
-float sum;
-printf("Dwse orio :");
-n=GetInteger();
-sum=1;
-i=2;
+/*Δήλωση-Αρχικοποίηση μεταβλητών*/
+ int n,i;
+ float sum;
+/*Εισαγωγή δεδομένων*/
+ printf("Dwse orio :");
+ n=GetInteger();
+ sum=1;
+ i=2;
+/*Υπολογισμοί*/ 
  while(i<=n){
    sum=sum+(1.0/i);
    i=i+1;
 }
-printf("To athroisma einai %.2f\n",sum);
-return 0;
+/*Εκτύπωση αποτελεσμάτων*/ 
+ printf("To athroisma einai %.2f\n",sum);
+ return 0;
 }
