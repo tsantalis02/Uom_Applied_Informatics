@@ -1,3 +1,24 @@
+/*
+File:a7f8.c
+    Μία εταιρία ενοικίασης αυτοκινήτων διατηρεί για την κάθε ενοικίαση τα εξής στοιχεία:
+    - Αριθμός ενοικίασης
+    - Μάρκα
+    - Κυβικά
+    - Όνομα ενοικιαστή
+    - Ημέρες ενοικίασης
+    - Τιμή ανά ημέρα
+    Να γραφεί πρόγραμμα που θα εκτελεί τις παρακάτω λειτουργίες:
+    1. Εισαγωγή του πλήθος των ενοικιάσεων
+    2. Εισαγωγή των στοιχείων κάθε ενοικίασης
+    3. Υπολογισμός αναλυτικής κατάστασης πληρωμής.
+    4. Υπολογισμός της ενοικίασης με το μεγαλύτερο κέρδος
+    5. Εμφάνιση αναλυτικής κατάστασης
+    6. Εμφάνιση των στοιχείων (Μάρκα, Κυβικά, Συνολικό Ποσό) για την ενοικίαση με το
+    μεγαλύτερο κέρδος.
+    Τα παραπάνω δεδομένα θα εισάγονται σε πίνακα δομών (μέγιστη διάσταση πίνακα Ν=20). Στην i θέση του
+    πίνακα θα καταχωρούνται τα στοιχεία του i αυτοκινήτου. Ο αριθμός ενοικίασης θα δίνεται αυτόματα από το
+    πρόγραμμα και όχι από τον χρήστη (για την i ενοικίαση θα δίνεται ως αριθμός ενοικίασης το i).
+*/
 #include <stdio.h>
 #include "simpio.h"
 #include <string.h>
@@ -36,6 +57,7 @@ int main(){
 return 0;
 }
 
+/* Λήψη δεδομένων και αποθήκευση σε πίνακα της δομής car_rentalT */
 int get_data(car_rentalT rentals[]){
   int i,num_rentals;
   printf("Dose ton arithmo ton enoikiaseon: ");
@@ -63,6 +85,7 @@ int get_data(car_rentalT rentals[]){
 return num_rentals;
 }
 
+/* Υπολογισμός συνολικού ποσού ενοικιάσεων */
 float calc(car_rentalT rentals[],int num_rentals){
    int i;
    float total=0;
@@ -75,7 +98,7 @@ float calc(car_rentalT rentals[],int num_rentals){
    return total;
 }
 
-
+/* Εύρεση ενοικίασης με το μεγαλύτερο κέρδος */
 best_carT find_best(int num_rentals, car_rentalT rentals[]){
   int i;
   best_carT best;
@@ -95,6 +118,7 @@ best_carT find_best(int num_rentals, car_rentalT rentals[]){
   return best;
 }
 
+/* Εκτύπωση αποτελεσμάτων */
 void print_data(int num_rentals,car_rentalT rentals[],float total,best_carT best){
   int i;
    printf("\n\n");
