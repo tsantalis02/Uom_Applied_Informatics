@@ -1,11 +1,21 @@
+/*
+File:a20f2.c
+    Να γραφεί ένα πρόγραμμα στο οποίο θα εισάγουμε έναν τυχαίο αριθμό (int) από το 1 έως το 7
+    και ανάλογα θα τυπώνει την αντίστοιχη μέρα της εβδομάδας. Η πρώτη μέρα της εβδομάδας (1) είναι η Δευτέρα (Monday).
+    Τα ονόματα των ημερών θα εμφανίζονται στα Αγγλικά (Monday, Tuesday, ... Sunday). Σε περίπτωση μη έγκυρου αριθμού
+    ημέρας θα εμφανίζεται το μήνυμα "ERROR".
+*/
 #include <stdio.h>
 #include "genlib.h"
 #include "simpio.h"
 
 int main(){
+ /*Δήλωση-Αρχικοποίηση μεταβλητών*/
  int arithmos;
- printf("Dwse enan arithmo apo to 1 ews to 7: ");
- arithmos=GetInteger();
+ /*Εισαγωγή δεδομένων*/ 
+  printf("Dwse enan arithmo apo to 1 ews to 7: ");
+  arithmos=GetInteger();
+ /*Εκτύπωση αποτελεσμάτων ανάλογα με τον αριθμό που εισήχθη*/
   switch(arithmos){
    case 1:
     printf("The day is Monday");
@@ -32,5 +42,5 @@ int main(){
     printf("ERROR");
     break;
   }
-return 0;
+  return 0;
 }
