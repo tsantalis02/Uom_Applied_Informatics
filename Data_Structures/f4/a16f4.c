@@ -1,3 +1,18 @@
+/*
+File:a16f4.c
+    
+Άδεια χρήσης: GNU General Public License v3.0
+    
+    Σε μία ουρά κάθε στοιχείο εισέρχεται σε κάποια συγκεκριμένη θέση σύμφωνα με το βαθμό προτεραιότητας (σε
+    αύξουσα σειρά). Να γραφεί πρόγραμμα που θα περιλαμβάνει τα παρακάτω:
+    - Εισαγωγή του πλήθους των κόμβων της ουράς.
+    - Τη συνάρτηση void insert_prot(QueueType *Queue, QueueElementType Item) την εισαγωγή στοιχείων
+    στην ουρά, κάθε κόμβος της οποίας θα περιέχει έναν τριψήφιο κωδικό αριθμό και τον βαθμό προτεραιότητας (1-20). 
+    Σε περίπτωση ίδιου βαθμού προτεραιότητας το στοιχείο εισέρχεται τελευταίο στην αντίστοιχη προτεραιότητα.
+    - Τη συνάρτηση void TraverseQ(QueueType Queue) που θα εμφανίζει τα περιεχόμενα της ουράς κατά αύξοντα
+    βαθμό προτεραιότητας. Τα στοιχεία κάθε κόμβου εμφανίζονται σε ξεχωριστή σειρά με ένα κενό μεταξύ τους και
+    πρώτο το βαθμό προτεραιότητας.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -36,32 +51,44 @@ int main(){
  QueueType AQueue;
  QueueElementType AnItem;
  int i,n;
-  CreateQ(&AQueue);
+  CreateQ(&AQueue); // Δημιουργώ την ουρά AQueue
   printf("DWSE TO PLITHOS:");
-  scanf("%d",&n);
+  scanf("%d",&n); // Διαβάζω το πλήθος των στοιχείων που θα εισαχθούν στην ουρά
   for(i=0;i<n;i++){
     printf("DWSE TON KODIKO TOU %dou KOMVOU:",i+1);
-    scanf("%d",&AnItem.code);
+    scanf("%d",&AnItem.code); // Διαβάζω τον κωδικό του κόμβου
     printf("DWSE TO VATHMO PROTERAIOTITAS TOU %dou KOMVOU:",i+1);
-    scanf("%d",&AnItem.prot);
-    insert_prot(&AQueue,AnItem);
+    scanf("%d",&AnItem.prot); // Διαβάζω τον βαθμό προτεραιότητας του κόμβου
+    insert_prot(&AQueue,AnItem); // Εισάγω τον κόμβο στην ουρά
   }
   printf("----------Priority Queue----------\n");
-  TraverseQ(AQueue);
+  TraverseQ(AQueue); // Εμφάνιση της ουράς
 return 0;
 }
+
 void CreateQ(QueueType *Queue)
+/* Λειτουργία: Δημιουργεί μια κενή συνδεδεμένη ουρά. 
+   Επιστρέφει: Μια κενή συνδεδεμένη ουρά 
+*/
 {
 	Queue->Front = NULL;
 	Queue->Rear = NULL;
 }
 
 boolean EmptyQ(QueueType Queue)
+/* Δέχεται:    Μια συνδεδεμένη ουρά. 
+   Λειτουργία: Ελέγχει αν η συνδεδεμένη ουρά είναι κενή. 
+   Επιστρέφει: True αν η ουρά είναι κενή, false  διαφορετικά 
+*/
 {
 	return (Queue.Front==NULL);
 }
 
 void AddQ(QueueType *Queue, QueueElementType Item)
+/* Δέχεται:    Μια συνδεδεμένη ουρά Queue και ένα  στοιχείο Item.
+   Λειτουργία: Προσθέτει το στοιχείο Item στο τέλος της συνδεδεμένης ουράς Queue.
+   Επιστρέφει: Την τροποποιημένη ουρά
+*/
 {
 	QueuePointer TempPtr;
 
@@ -76,6 +103,12 @@ void AddQ(QueueType *Queue, QueueElementType Item)
 }
 
 void RemoveQ(QueueType *Queue, QueueElementType *Item)
+/* Δέχεται:    Μια συνδεδεμένη ουρά. 
+   Λειτουργία: Αφαιρεί το στοιχείο Item από την  κορυφή της συνδεδεμένης ουράς, 
+                αν δεν είναι  κενή. 
+   Επιστρέφει: Το στοιχείο Item και την τροποποιημένη συνδεδεμένη ουρά. 
+   Έξοδος:     Μήνυμα κενής ουράς, αν η ουρά είναι  κενή 
+*/
 {
     QueuePointer TempPtr;
 
@@ -105,7 +138,7 @@ void TraverseQ(QueueType Queue)
    	    CurrPtr = Queue.Front;
          while ( CurrPtr!=NULL )
         {
-      	     printf("%d %d\n", CurrPtr->Data.prot,CurrPtr->Data.code);
+      	     printf("%d %d\n", CurrPtr->Data.prot,CurrPtr->Data.code); // Αλλαγή στον τρόπο εμφάνισης
              CurrPtr = CurrPtr->Next;
         }
    }
@@ -116,33 +149,38 @@ void insert_prot(QueueType *Queue,QueueElementType Item)
 {
  boolean flag;
  QueuePointer TempPtr,CurrPtr,PredPtr;
-   TempPtr=(QueuePointer)malloc(sizeof(struct QueueNode));
-   TempPtr->Data=Item;
-   TempPtr->Next=NULL;
-   if(EmptyQ(*Queue)){
-    Queue->Front=TempPtr;
-    Queue->Rear=TempPtr;
+   TempPtr=(QueuePointer)malloc(sizeof(struct QueueNode)); // Δέσμευση μνήμης για τον νέο κόμβο
+   TempPtr->Data=Item; // Ανάθεση τιμής στα δεδομένα (Data) του νέου κόμβου
+   TempPtr->Next=NULL; // Αρχικοποίηση του δείκτη (Next) του νέου κόμβου
+   if(EmptyQ(*Queue)){ // Αν η ουρά είναι κενή
+    Queue->Front=TempPtr; // Ενημέρωση του δείκτη Front της ουράς στον νέο (και μοναδικό) κόμβο
+    Queue->Rear=TempPtr; // Ενημέρωση του δείκτη Rear της ουράς στον νέο (και μοναδικό) κόμβο
    }else{
-     PredPtr=Queue->Front;
-     CurrPtr=Queue->Front;
-     flag=FALSE;
-     if(CurrPtr->Data.prot>TempPtr->Data.prot){
-        Queue->Front=TempPtr;
-        TempPtr->Next=CurrPtr;
+     PredPtr=Queue->Front; // Αρχικοποίηση του PredPtr στην αρχή της ουράς
+     CurrPtr=Queue->Front; // Αρχικοποίηση του CurrPtr στην αρχή της ουράς
+     flag=FALSE; // Αρχικοποίηση flag
+     if(CurrPtr->Data.prot>TempPtr->Data.prot) /* Αν ο βαθμός προτεραιότητας του τρέχοντος κόμβου (1ου κόμβου) είναι
+                                        μεγαλύτερος από τον βαθμό του νέου αντικειμένου */
+      //Ο κόμβος εισάγεται στην αρχή της ουράς
+     {
+        Queue->Front=TempPtr; // Ενημέρωση του δείκτη Front της ουράς στον νέο κόμβο
+        TempPtr->Next=CurrPtr; // Ενημέρωση του δείκτη Next του νέου κόμβου στον τρέχοντα κόμβο
      }else{
-       while(!(Queue->Front==Queue->Rear) && flag==FALSE){
-        if(CurrPtr->Data.prot>TempPtr->Data.prot){
-            PredPtr->Next=TempPtr;
-            TempPtr->Next=CurrPtr;
-            flag=TRUE;
+       while(!(Queue->Front==Queue->Rear) && flag==FALSE){ // Όσο δεν έχουμε φτάσει στο τέλος της ουράς και δεν έγινε η εισαγωγή
+        if(CurrPtr->Data.prot>TempPtr->Data.prot) /* Αν ο βαθμός προτεραιότητας του τρέχοντος κόμβου είναι
+                                                    μεγαλύτερος από τον βαθμό του νέου αντικειμένου */
+	{
+            PredPtr->Next=TempPtr; // Ενημέρωση του δείκτη Next του προηγούμενου κόμβου στον νέο κόμβο
+            TempPtr->Next=CurrPtr; // Ενημέρωση του δείκτη Next του νέου κόμβου στον τρέχοντα κόμβο
+            flag=TRUE; // Ενημέρωση του flag
         }
-        PredPtr=CurrPtr;
-        CurrPtr=CurrPtr->Next;
+        PredPtr=CurrPtr; // Ενημέρωση του PredPtr στον τρέχοντα κόμβο της ουράς
+        CurrPtr=CurrPtr->Next; // Ενημέρωση του CurrPtr στον επόμενο κόμβο της ουράς
        }
      }
-   if(flag==FALSE){
-    PredPtr->Next=TempPtr;
-    Queue->Rear=TempPtr;
+   if(flag==FALSE){ // Αν δεν έχει γίνει η εισαγωγή
+    PredPtr->Next=TempPtr; // Ενημέρωση του δείκτη Next του προηγούμενου κόμβου στον νέο κόμβο
+    Queue->Rear=TempPtr; // Ενημέρωση του δείκτη Rear στον νέο κόμβο
    }
    }
 }
