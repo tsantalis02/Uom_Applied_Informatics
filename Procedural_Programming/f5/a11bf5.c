@@ -1,5 +1,8 @@
 /*
 File:a11bf5.c
+
+Άδεια χρήσης: GNU General Public License v3.0
+
 */
 #include <stdio.h>
 #include <math.h>
