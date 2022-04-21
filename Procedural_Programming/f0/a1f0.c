@@ -1,6 +1,7 @@
 /*
 * File name: a1f0.c
 * --------------------
+*Άδεια χρήσης: GNU General Public License v3.0
 * This program adds two numbers, printing
 * their sum in the end.
 */
