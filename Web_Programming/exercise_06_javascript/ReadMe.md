@@ -9,4 +9,4 @@ Hint:
 **document.body.style.fontSize** 
 Επαυξήστε με περισσότερα πλήκτρα ή elements, αλλάζοντας περαιτέρω την αισθητική και λειτουργικότητα.
 
-<img src="exercise-6.png">
+<img src="exercise_06.png">
