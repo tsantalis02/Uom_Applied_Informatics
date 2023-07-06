@@ -1,0 +1,16 @@
+#calculate{
+    width:200px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(221, 216, 216);
+}
+select{
+    background-color: rgb(221, 216, 216);
+}
+optgroup{
+    background-color: white;
+}
+text{
+    font-weight: bold;
+}
