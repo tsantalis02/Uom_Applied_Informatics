@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1bu4vbt" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.3.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="Decision_0lz0bt5" name="Παρουσία γονέων">
+    <informationRequirement id="InformationRequirement_0ge55iv">
+      <requiredInput href="#InputData_1gwtl0d" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_11xqh4f" hitPolicy="FIRST">
+      <input id="Input_1" label="Παρόντες γονείς">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>παροντεςγονεις</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Ηλεκτρονική αίτηση" name="ηλεκτρονικηαιτηση" typeRef="boolean" />
+      <output id="OutputClause_0h1cbbj" label="Σφάλμα" name="σφαλμα" typeRef="string" />
+      <rule id="DecisionRule_1g46nyf">
+        <inputEntry id="UnaryTests_15r57mf">
+          <text>[0..1]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f3s869">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qb8htm">
+          <text>"Δεν υπήρξε σφάλμα κατά την εισαγωγή των στοιχείων"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hbv47m">
+        <inputEntry id="UnaryTests_0kzelbg">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07tcjjn">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1drd1ws">
+          <text>"Δεν υπήρξε σφάλμα κατά την εισαγωγή των στοιχείων"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_119o5mp">
+        <inputEntry id="UnaryTests_1oouei9">
+          <text>&lt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uhodei">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1soy0oz">
+          <text>"Υπήρξε σφάλμα κατά την εισαγωγή των στοιχείων"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iflnsn">
+        <inputEntry id="UnaryTests_1vydqz7">
+          <text>&gt; 2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tnap8m">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12lb5l3">
+          <text>"Υπήρξε σφάλμα κατά την εισαγωγή των στοιχείων"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_166pynr">
+        <inputEntry id="UnaryTests_1q7bjc6">
+          <text>[..]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hr6hen">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1agsjhi">
+          <text>"Υπήρξε σφάλμα κατά την εισαγωγή των στοιχείων"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1gwtl0d" name="Παρόντες γονείς" />
+  <decision id="Decision_14kjzot" name="Ηλεκτρονική αίτηση">
+    <informationRequirement id="InformationRequirement_01do9w2">
+      <requiredDecision href="#Decision_0lz0bt5" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_18spflb">
+      <input id="InputClause_0s545ky" label="Ηλεκτρονική αίτηση">
+        <inputExpression id="LiteralExpression_0qe1fdy" typeRef="boolean">
+          <text>ηλεκτρονικηαιτηση</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0xh1117" label="Δραστηριότητα προς εκτέλεση" name="δραστηριοτηταπροςεκτελεση" typeRef="string" />
+      <rule id="DecisionRule_0osqvar">
+        <inputEntry id="UnaryTests_0do7mr0">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1258tpd">
+          <text>"Αποστολή αριθμού πρωτοκόλλου με email"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_063mok6">
+        <inputEntry id="UnaryTests_0fm9148">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dp9e7q">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0lz0bt5">
+        <dc:Bounds height="80" width="180" x="160" y="310" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0jt1pnw" dmnElementRef="InputData_1gwtl0d">
+        <dc:Bounds height="45" width="125" x="188" y="478" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0tofowe" dmnElementRef="InformationRequirement_0ge55iv">
+        <di:waypoint x="251" y="478" />
+        <di:waypoint x="250" y="410" />
+        <di:waypoint x="250" y="390" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1okiken" dmnElementRef="InformationRequirement_01do9w2">
+        <di:waypoint x="250" y="310" />
+        <di:waypoint x="250" y="210" />
+        <di:waypoint x="250" y="190" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0v3lkf8" dmnElementRef="Decision_14kjzot">
+        <dc:Bounds height="80" width="180" x="160" y="110" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

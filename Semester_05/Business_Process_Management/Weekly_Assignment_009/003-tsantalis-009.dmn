@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_f83e6cf5-6147-4d76-a8e7-700068ad09d7" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" camunda:diagramRelationId="cd33c693-c6b9-4ee9-a50b-466604daa47e">
+  <decision id="Decision_0vslh6y" name="Παρουσία γονέων">
+    <informationRequirement id="InformationRequirement_11ohb30">
+      <requiredInput href="#InputData_0cajlpe"/>
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0azx1hv">
+      <input id="Input_1" label="Παρόντες γονείς">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>παροντεςγονεις</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Δραστηριότητα προς εκτέλεση(πριν την κατάθεση της αίτησης)" name="δραστηριοτηταπροςεκτελεση01" typeRef="string" biodi:width="192"/>
+      <output id="OutputClause_0jf627o" label="Δραστηριότητα προς εκτέλεση(πριν την κατάθεση της αίτησης)" name="δραστηριοτηταπροςεκτελεση02" typeRef="string"/>
+      <output id="OutputClause_1hd9a6i" label="Ηλεκτρονική αίτηση" name="ηλεκτρονικηαιτηση" typeRef="boolean" biodi:width="192"/>
+      <rule id="DecisionRule_1qsq758">
+        <inputEntry id="UnaryTests_0b8rxs3">
+          <text>"Και οι δύο"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mjef2t">
+          <text/>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13ubrjm">
+          <text/>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10zsvxu">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_023c8q1">
+        <inputEntry id="UnaryTests_1uezd3x">
+          <text>"Ένας"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ze0dz9">
+          <text>"Υπεύθυνη δήλωση απόντος γονέα"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_083q6ve">
+          <text/>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f16ywg">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0egqmhr">
+        <inputEntry id="UnaryTests_0fzivby">
+          <text>"Κανένας"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0satolr">
+          <text>"Επισύναψη δικαιολογητικών σε email"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i9rs8s">
+          <text>"Επισύναψη υπεύθυνων δηλώσεων και των δύο"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pgzskr">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_0cajlpe" name="Παρόντες γονείς"/>
+  <decision id="Decision_1yda8p8" name="Ηλεκτρονική αίτηση">
+    <informationRequirement id="InformationRequirement_09k2wlp">
+      <requiredDecision href="#Decision_0vslh6y"/>
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1mprlbj">
+      <input id="InputClause_08qah2s" label="Ηλεκτρονική αίτηση">
+        <inputExpression id="LiteralExpression_04eekdy" typeRef="boolean">
+          <text>ηλεκτρονικηαιτηση</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1nppb6m" label="Δραστηριότητα προς εκτέλεση(μετά την κατάθεση της αίτησης)" name="δραστηριοτηταπροςεκτελεση03" typeRef="string"/>
+      <rule id="DecisionRule_1yia53c">
+        <inputEntry id="UnaryTests_1xy6att">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vv3fkz">
+          <text>"Αποστολή αριθμού πρωτοκόλλου με email"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12i5eth">
+        <inputEntry id="UnaryTests_1444qqt">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07ns3eo">
+          <text/>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0vslh6y">
+        <dc:Bounds height="80" width="180" x="480" y="100"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1ntnsn5" dmnElementRef="InputData_0cajlpe">
+        <dc:Bounds height="45" width="125" x="467" y="247"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0m643sf" dmnElementRef="InformationRequirement_11ohb30">
+        <di:waypoint x="530" y="247"/>
+        <di:waypoint x="570" y="200"/>
+        <di:waypoint x="570" y="180"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1jics15" dmnElementRef="InformationRequirement_09k2wlp">
+        <di:waypoint x="570" y="100"/>
+        <di:waypoint x="660" y="-30"/>
+        <di:waypoint x="660" y="-50"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0fb9iop" dmnElementRef="Decision_1yda8p8">
+        <dc:Bounds height="80" width="180" x="570" y="-130"/>
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
