@@ -1,0 +1,530 @@
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_1.txt test_sol1_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=false  P3=true  P4=true  P5=true  P6=false  P7=false  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_1.txt test_sol1_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=false  P3=true  P4=true  P5=true  P6=false  P7=false  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.004000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_1.txt test_sol1_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=false  P3=true  P4=true  P5=true  P6=false  P7=false  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_1.txt test_sol1_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=false  P3=true  P4=true  P5=true  P6=false  P7=false  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_1.txt test_sol1_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=false  P3=true  P4=true  P5=true  P6=false  P7=false  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_1.txt test_sol1_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=true  P6=true  P7=false  P8=true  P9=true  P10=false  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of steps: 20
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_2.txt test_sol2_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=true  P10=true  P11=false  P12=false  
+Time spent: 0.004000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_2.txt test_sol2_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=true  P10=true  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_2.txt test_sol2_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=true  P10=true  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_2.txt test_sol2_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=true  P10=true  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_2.txt test_sol2_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=true  P10=true  P11=false  P12=false  
+Time spent: 0.004000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_2.txt test_sol2_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=true  P6=true  P7=true  P8=true  P9=true  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of steps: 14
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_3.txt test_sol3_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=false  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 1
+Number of steps: 5
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_3.txt test_sol3_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=false  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 1
+Number of steps: 5
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_3.txt test_sol3_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=false  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 1
+Number of steps: 5
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_3.txt test_sol3_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=false  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 1
+Number of steps: 5
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_3.txt test_sol3_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=false  P10=true  P11=false  P12=true  
+Time spent: 0.004000 secs
+Number of restarts: 1
+Number of steps: 5
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_3.txt test_sol3_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=true  P6=true  P7=false  P8=false  P9=false  P10=true  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of steps: 29
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_4.txt test_sol4_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=false  P4=true  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.004000 secs
+Number of restarts: 3
+Number of steps: 9
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_4.txt test_sol4_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=false  P4=true  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 3
+Number of steps: 9
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_4.txt test_sol4_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=false  P4=true  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 3
+Number of steps: 9
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_4.txt test_sol4_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=false  P4=true  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 3
+Number of steps: 9
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_4.txt test_sol4_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=false  P4=true  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 3
+Number of steps: 9
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_4.txt test_sol4_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=false  P5=false  P6=true  P7=true  P8=false  P9=false  P10=true  P11=true  P12=false  
+Time spent: 0.003000 secs
+Number of steps: 142
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_5.txt test_sol5_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=false  P4=false  P5=false  P6=false  P7=false  P8=true  P9=false  P10=true  P11=false  P12=false  
+Time spent: 0.003000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_5.txt test_sol5_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=false  P4=false  P5=false  P6=false  P7=false  P8=true  P9=false  P10=true  P11=false  P12=false  
+Time spent: 0.004000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_5.txt test_sol5_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=false  P4=false  P5=false  P6=false  P7=false  P8=true  P9=false  P10=true  P11=false  P12=false  
+Time spent: 0.004000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_5.txt test_sol5_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=false  P4=false  P5=false  P6=false  P7=false  P8=true  P9=false  P10=true  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_5.txt test_sol5_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=false  P4=false  P5=false  P6=false  P7=false  P8=true  P9=false  P10=true  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 2
+Number of steps: 7
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_5.txt test_sol5_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=true  P7=true  P8=false  P9=true  P10=true  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of steps: 40
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_6.txt test_sol6_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_6.txt test_sol6_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_6.txt test_sol6_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_6.txt test_sol6_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=true  P6=false  P7=true  P8=false  P9=true  P10=true  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_6.txt test_sol6_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=false  P4=false  P5=true  P6=true  P7=true  P8=true  P9=false  P10=false  P11=false  P12=true  
+Time spent: 0.004000 secs
+Number of restarts: 1
+Number of steps: 5
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_6.txt test_sol6_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=true  P7=true  P8=true  P9=true  P10=false  P11=false  P12=true  
+Time spent: 0.000000 secs
+Number of steps: 33
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_7.txt test_sol7_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=false  P7=false  P8=false  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_7.txt test_sol7_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=false  P7=false  P8=false  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_7.txt test_sol7_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=false  P7=false  P8=false  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_7.txt test_sol7_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=false  P7=false  P8=false  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_7.txt test_sol7_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=false  P7=false  P8=false  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_7.txt test_sol7_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=true  P6=true  P7=true  P8=false  P9=true  P10=false  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of steps: 19
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_8.txt test_sol8_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 1
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_8.txt test_sol8_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 1
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_8.txt test_sol8_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 1
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_8.txt test_sol8_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 1
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_8.txt test_sol8_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 1
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_8.txt test_sol8_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=false  P6=true  P7=false  P8=true  P9=true  P10=true  P11=false  P12=false  
+Time spent: 0.000000 secs
+Number of steps: 58
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_9.txt test_sol9_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=true  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_9.txt test_sol9_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=true  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_9.txt test_sol9_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=true  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_9.txt test_sol9_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=true  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_9.txt test_sol9_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=true  P5=true  P6=true  P7=false  P8=false  P9=true  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_9.txt test_sol9_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=true  P6=true  P7=true  P8=false  P9=true  P10=false  P11=true  P12=true  
+Time spent: 0.000000 secs
+Number of steps: 17
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_10.txt test_sol10_m120_hill1.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_10.txt test_sol10_m120_hill2.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_10.txt test_sol10_m120_hill3.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_10.txt test_sol10_m120_hill4.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m120_10.txt test_sol10_m120_hill5.txt 
+
+
+Solution found with hill-climbing!
+P1=false  P2=true  P3=true  P4=false  P5=false  P6=true  P7=false  P8=true  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of restarts: 0
+Number of steps: 2
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m120_10.txt test_sol10_m120_depth1.txt 
+
+
+Solution found with depth-first!
+P1=true  P2=true  P3=true  P4=true  P5=true  P6=false  P7=true  P8=true  P9=false  P10=false  P11=true  P12=false  
+Time spent: 0.000000 secs
+Number of steps: 30

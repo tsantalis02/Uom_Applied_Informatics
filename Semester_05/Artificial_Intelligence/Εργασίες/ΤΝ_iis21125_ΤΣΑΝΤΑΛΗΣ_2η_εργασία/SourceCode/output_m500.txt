@@ -1,0 +1,470 @@
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_1.txt test_sol1_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 43872
+Number of steps: 147496
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_1.txt test_sol1_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 43920
+Number of steps: 147393
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_1.txt test_sol1_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 44020
+Number of steps: 147865
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_1.txt test_sol1_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 43884
+Number of steps: 147630
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_1.txt test_sol1_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 44048
+Number of steps: 147911
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_1.txt test_sol1_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.015000 secs
+Number of steps: 360
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_2.txt test_sol2_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40386
+Number of steps: 148101
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_2.txt test_sol2_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40353
+Number of steps: 148361
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_2.txt test_sol2_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40508
+Number of steps: 148543
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_2.txt test_sol2_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40352
+Number of steps: 148147
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_2.txt test_sol2_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40237
+Number of steps: 147826
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_2.txt test_sol2_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.014000 secs
+Number of steps: 348
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_3.txt test_sol3_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 39777
+Number of steps: 146246
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_3.txt test_sol3_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 39857
+Number of steps: 146578
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_3.txt test_sol3_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 39941
+Number of steps: 146819
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_3.txt test_sol3_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 39735
+Number of steps: 146445
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_3.txt test_sol3_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 39937
+Number of steps: 146946
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_3.txt test_sol3_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.016000 secs
+Number of steps: 397
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_4.txt test_sol4_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41356
+Number of steps: 148507
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_4.txt test_sol4_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41163
+Number of steps: 148247
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_4.txt test_sol4_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41310
+Number of steps: 148720
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_4.txt test_sol4_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41414
+Number of steps: 148462
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_4.txt test_sol4_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41102
+Number of steps: 147684
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_4.txt test_sol4_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.013000 secs
+Number of steps: 351
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_5.txt test_sol5_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 42030
+Number of steps: 146106
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_5.txt test_sol5_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 42200
+Number of steps: 146426
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_5.txt test_sol5_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41919
+Number of steps: 146152
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_5.txt test_sol5_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41886
+Number of steps: 145729
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_5.txt test_sol5_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 42027
+Number of steps: 145864
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_5.txt test_sol5_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.010000 secs
+Number of steps: 292
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_6.txt test_sol6_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40749
+Number of steps: 146807
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_6.txt test_sol6_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40813
+Number of steps: 147603
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_6.txt test_sol6_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40640
+Number of steps: 146517
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_6.txt test_sol6_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40755
+Number of steps: 147085
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_6.txt test_sol6_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40767
+Number of steps: 146854
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_6.txt test_sol6_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.011000 secs
+Number of steps: 315
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_7.txt test_sol7_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41740
+Number of steps: 146860
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_7.txt test_sol7_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41974
+Number of steps: 146788
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_7.txt test_sol7_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41942
+Number of steps: 146961
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_7.txt test_sol7_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41573
+Number of steps: 146452
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_7.txt test_sol7_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 41957
+Number of steps: 146731
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_7.txt test_sol7_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.014000 secs
+Number of steps: 329
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_8.txt test_sol8_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 42089
+Number of steps: 147820
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_8.txt test_sol8_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 42079
+Number of steps: 147523
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_8.txt test_sol8_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 37860
+Number of steps: 132448
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_8.txt test_sol8_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.001999 secs
+Number of restarts: 41432
+Number of steps: 144874
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_8.txt test_sol8_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.004002 secs
+Number of restarts: 41455
+Number of steps: 145542
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_8.txt test_sol8_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.012000 secs
+Number of steps: 374
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_9.txt test_sol9_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40807
+Number of steps: 145193
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_9.txt test_sol9_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.002998 secs
+Number of restarts: 40803
+Number of steps: 145283
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_9.txt test_sol9_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.001999 secs
+Number of restarts: 40905
+Number of steps: 145497
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_9.txt test_sol9_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40885
+Number of steps: 145296
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_9.txt test_sol9_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40757
+Number of steps: 144899
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_9.txt test_sol9_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.012000 secs
+Number of steps: 336
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_10.txt test_sol10_m500_hill1.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40059
+Number of steps: 139742
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_10.txt test_sol10_m500_hill2.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.004002 secs
+Number of restarts: 40080
+Number of steps: 139950
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_10.txt test_sol10_m500_hill3.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.004002 secs
+Number of restarts: 39937
+Number of steps: 139008
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_10.txt test_sol10_m500_hill4.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.004002 secs
+Number of restarts: 40698
+Number of steps: 141552
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe hill test_m500_10.txt test_sol10_m500_hill5.txt 
+
+
+NO SOLUTION found with hill-climbing...
+Time spent: 60.000999 secs
+Number of restarts: 40727
+Number of steps: 141634
+
+C:\Users\panag\OneDrive\“§¦¢¦š ©«ãª\AI\SourceCode>bcsp.exe depth test_m500_10.txt test_sol10_m500_depth1.txt 
+
+
+NO SOLUTION EXISTS. Proved by depth-first!
+Time spent: 0.007000 secs
+Number of steps: 302
