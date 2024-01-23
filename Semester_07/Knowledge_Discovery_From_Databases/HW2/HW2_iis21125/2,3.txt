@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 20 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.5 -S -1.0 -c -1
+Relation:     house-votes-84-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    435
+Attributes:   17
+               handicapped-infants
+               water-project-cost-sharing
+               adoption-of-the-budget-resolution
+               physician-fee-freeze
+               el-salvador-aid
+               religious-groups-in-schools
+               anti-satellite-test-ban
+               aid-to-nicaraguan-contras
+               mx-missile
+               immigration
+               synfuels-corporation-cutback
+               education-spending
+               superfund-right-to-sue
+               crime
+               duty-free-exports
+               export-administration-act-south-africa  
+              class
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.5 (218 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 10
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 17
+
+Size of set of large itemsets L(2): 9
+
+Size of set of large itemsets L(3): 1
+
+Best rules found:
+
+ 1.  adoption-of-the-budget-resolution=1  physician-fee-freeze=0 219 ==> class=democrat 219    <conf:(1)> lift:(1.63) lev:(0.19) [84] conv:(84.58)
+ 2.  physician-fee-freeze=0 247 ==> class=democrat 245    <conf:(0.99)> lift:(1.62) lev:(0.21) [93] conv:(31.8)
+ 3.  adoption-of-the-budget-resolution=1 class=democrat 231 ==>  physician-fee-freeze=0 219    <conf:(0.95)> lift:(1.67) lev:(0.2) [87] conv:(7.68)
+ 4. class=democrat 267 ==>  physician-fee-freeze=0 245    <conf:(0.92)> lift:(1.62) lev:(0.21) [93] conv:(5.02)
+ 5.  adoption-of-the-budget-resolution=1 253 ==> class=democrat 231    <conf:(0.91)> lift:(1.49) lev:(0.17) [75] conv:(4.25)
+

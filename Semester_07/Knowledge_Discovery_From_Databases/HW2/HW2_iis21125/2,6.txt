@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 20 -T 0 -C 0.7 -D 0.05 -U 1.0 -M 0.5 -S -1.0 -A -c -1
+Relation:     house-votes-84-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    435
+Attributes:   17
+               handicapped-infants
+               water-project-cost-sharing
+               adoption-of-the-budget-resolution
+               physician-fee-freeze
+               el-salvador-aid
+               religious-groups-in-schools
+               anti-satellite-test-ban
+               aid-to-nicaraguan-contras
+               mx-missile
+               immigration
+               synfuels-corporation-cutback
+               education-spending
+               superfund-right-to-sue
+               crime
+               duty-free-exports
+               export-administration-act-south-africa  
+              class
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.5 (218 instances)
+Minimum metric <confidence>: 0.7
+Number of cycles performed: 10
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 4
+
+Size of set of large itemsets L(2): 1
+
+Best rules found:
+
+ 1.  adoption-of-the-budget-resolution=1  physician-fee-freeze=0 219 ==> class=democrat 219    conf:(1)
+ 2.  physician-fee-freeze=0 247 ==> class=democrat 245    conf:(0.99)
+ 3.  adoption-of-the-budget-resolution=1 253 ==> class=democrat 231    conf:(0.91)
+ 4.  education-spending=0 264 ==> class=democrat 231    conf:(0.88)
+ 5.  aid-to-nicaraguan-contras=1 257 ==> class=democrat 222    conf:(0.86)
+
