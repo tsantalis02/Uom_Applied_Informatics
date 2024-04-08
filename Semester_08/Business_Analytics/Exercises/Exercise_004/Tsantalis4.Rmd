@@ -1,0 +1,94 @@
+---
+title: "Exercise-004"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document: default
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{DejaVuSerif}
+lang: el
+date: "2024-03-29"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Εργασία 2
+Να μελετήσετε το dataset diamonds του ggplot2 package.
+
+Να εντοπίσετε δύο (2)  ζευγάρια μεταβλητών που θεωρείτε ότι παρουσιάζουν ενδιαφέρον:
+
+   - Να μελετήσετε τη μεταξύ τους συσχέτιση (cor)
+   - Να δημιουργήσετε το αντίστοιχο διάγραμμα διασποράς (scatterplot)
+   - Να σχολιάσετε τα ευρήματά σας.
+
+Η εργασία θα είναι μια σύντομη παρουσίαση σε google slides (+κώδικας).
+
+
+```{r}
+library(ggplot2)
+
+
+# Compute pearson correlation and plot histograms for variables x and z
+
+ print(cor(diamonds$x,diamonds$z,method="pearson"))
+ print(ggplot(diamonds,aes(x=x,y=z)) + geom_point())
+
+
+# Compute pearson correlation and plot histograms for variables depth and table 
+
+ print(cor(diamonds$depth,diamonds$table,method="pearson"))
+ print(ggplot(diamonds,aes(x=depth,y=table)) + geom_point())
+
+```
+
+## Σχολιασμός
+
+Στο διάγραμμα διασποράς των μεταβλητών x και z βλέπουμε ότι τα σημεία δεν είναι διεσπαρμένα στο επίπεδο, το οποίο σημαίνει ότι υπάρχει γραμμική σχέση μεταξύ αυτών. Στο διάγραμμα διασποράς των μεταβλητών depth και table παρατηρούμε ότι τα σημεία είναι διεσπαρμένα στο επίπεδο, το οποίο σημαίνει ότι υπάρχει καμπυλόγραμμη σχέση μεταξύ αυτών. 
+
+## Εργασία 3
+
+Να μελετήσετε το dataset airquality (base R). Το dataset περιέχει ημερήσιες μετρήσεις της ποιότητας του αέρα (air quality) στη Νέα Υόρκη για μια περίοδο 5 μηνών.
+
+Να απαντήσετε στις παρακάτω ερωτήσεις:
+
+  - Ποιά είναι η μέση τιμή της θερμοκρασίας για τη δεδομένη περίοδο;
+  - Ποιά ημέρα ήταν η θερμότερη;
+  - Ποιά είχε τον πολύ αέρα;
+  - Ποιές ημέρες η θερμοκρασία ήταν μεγαλύτερη από 90 βαθμούς Fahrenheit?
+
+Επιπλέον, με τα διαθέσιμα δεδομένα, να δημιουργήσετε ένα διάγραμμα διασποράς (scatterplot), ένα boxplot, ένα histgram κι ένα bar chart.
+
+Να σχολιάσετε τα ευρήματά σας.
+Η εργασία θα είναι μια σύντομη παρουσίαση σε google slides στο επισυναπτόμενο αρχείο... εκεί να έχετε screenshots από τα διαγράμματα, editable κώδικα, τα αποτελέσματά σας, κι έναν σύντομο σχολιασμό.
+
+```{r}
+# Mean Temperature
+print(mean(airquality$Temp))
+# Hottest Day
+cat("Day: ",airquality$Day[which.max(airquality$Temp)],"Month: ",airquality$Month[which.max(airquality$Temp)],"\n")
+# Max wind speed day
+cat("Day: ",airquality$Day[which.max(airquality$Wind)],"Month: ",airquality$Month[which.max(airquality$Wind)],"\n")
+# Days with temperature greater than 90 Fahrenheit
+Greater_Than_90 <- subset(airquality,Temp>90)
+print(Greater_Than_90)
+
+# Scatterplot
+print(ggplot(airquality, aes(Temp,Wind))+geom_point(shape="x",color="red"))
+# Boxplot
+print(with(airquality,boxplot(Temp ~ Month, col="bisque")))
+# Histogram
+print(ggplot(aes(x = Temp, fill = Day), data = airquality) + geom_histogram(binwidth = .1, color="black") + 
+        facet_wrap(~Month) + labs(title = "Temperatures By Month", x = "Temperature", y = "Frequency") + 
+        scale_x_sqrt())
+# Bar chart
+print(ggplot(airquality, aes(Temp)) +
+        geom_bar(fill="lightblue", position="dodge", width=0.75))
+```
+
+## Σχολιασμός
+Στο διάγραμμα διασποράς παρατηρούμε την σχέση μεταξύ των μεταβλητών Wind και Temp. Φαίνεται ότι τα σημεία είναι τυχαία διεσπαρμένα στο επίπεδο, το οποίο σημαίνει ότι υπάρχει καμπυλόγραμμη (και όχι γραμμική) σχέση μεταξύ των δύο μεταβλητών. Στο boxplot παρατηρούμε κάτι που επιβεβαιώνεται και από τα ιστογράμματα, ότι δηλαδή όσο περνάνε οι μήνες ανεβαίνουν οι θερμοκρασίες και στην συνέχεια “πέφτουν” με χαμηλότερο ρυθμό. Τέλος, στο bar chart παρατηρούμε την κατανομή των θερμοκρασιών για αυτό το διάστημα των 5 μηνών. 
+

@@ -1,0 +1,78 @@
+---
+title: "Εργασία 5"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document: default
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{DejaVuSerif}
+lang: el
+date: "2024-04-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Επιλογή Dataset
+
+Το dataset που επίλεξα περιέχει μέσους όρους των στατιστικών όλων των παικτών που αγωνίστηκαν στην Euroleague την σεζόν 2021/21. Το επίλεξα γιατί εκτό από τα στατιστικά στοιχεία, περιέχει και αναλυτικά στοιχεία για τον κάθε παίκτη. Για κάθε παίκτη έχουμε ονοματεπώνυμο, ομάδα, ύψος, αριθμό φανέλας, ημερομηνία γέννησης, θέση, εθνικότητα, συνολικά παιχνίδια* , συνολικοί πόντοι * , μέσος όρος πόντων* , επιτυχημένα(στον στόχο)/εκτελεσμένα δίποντα και ποσοστό στα δίποντα, επιτυχημένα(στον στόχο)/εκτελεσμένα τρίποντα και ποσοστό στα τρίποντα, επιτυχημένες(στον στόχο)/εκτελεσμένες βολές και ποσοστό στις βολές, μέσο όρο στα ριμπάουντ, στα κλεψίματα, στις ασίστ και στα κοψίματα(μπλοκ). Επίσης άλλαξα τα column names καθώς υπήρχε θέμα στο κώδικα (2FG -> TWOFG, 2FG_% -> TWOFG_PER, 3FG -> THREEFG, 3FG_% -> THREEFG_PER, FT_% -> FT_PER).
+
+*(σε όλη τη καριέρα τους στη διοργάνωση)  
+
+## Ενδεικτικά διαγράμματα
+
+```{r}
+library(ggplot2)
+library(readr)
+euroleaguePlayers_average <- read_csv("C:/Users/UserA/Downloads/euroleaguePlayers_average.csv")
+colnames(euroleaguePlayers_average) <- c('full_name', 'surname', 'name', 'Club', 'Dorsal', 'Position', 'Height', 'Born', 'Nationality', 'G', 'Pts', 'Avg', 'TWOFG', 'TWOFG_PER', 'THREEFG', 'THREEFG_PER', 'FT', 'FT_PER', 'Reb', 'St', 'As', 'Bl')
+ggplot(euroleaguePlayers_average, aes(FT_PER, TWOFG_PER))+geom_point(shape="x",color="red", na.rm = TRUE)
+```
+
+Σε αυτό το διάγραμμα διασπόρας παρατηρούμε ότι όσοι παίκτες έχουν γύρω στο 75% στις βολές έχουν και σχετικά καλό ποσοστό στα δίποντα (γύρω στο 50%).
+
+```{r}
+with(euroleaguePlayers_average,boxplot(FT_PER ~ Position, col="bisque"))
+```
+
+Σε αυτό το διάγραμμα παρατηρούμε το ποσοστό των παικτών στις βόλες σε σχέση με τη θέση τους.
+
+```{r}
+ggplot(euroleaguePlayers_average, aes(Position)) + geom_bar(fill="magenta", position="dodge", width=0.25) + theme_bw()
+```
+
+Σε αυτό το διάγραμμα παρατηρούμε τον αριθμό των παικτών ανάλογα με τη θέση στην οποία παίζουν.
+
+## Γραμμική παλινδρόμηση με μία μεταβλητή
+
+```{r}
+model1 <- lm(TWOFG_PER ~ THREEFG_PER, euroleaguePlayers_average)
+ggplot(euroleaguePlayers_average, aes(THREEFG_PER, TWOFG_PER))+ geom_point(shape="x",color="blue", na.rm = TRUE) + theme_bw() + geom_abline(aes(intercept = coef(model1)[1], slope = coef(model1)[2]), colour = "red")
+```
+
+## Γραμμική παλινδρόμηση με δύο μεταβλητές
+
+```{r}
+ model2 <- lm(TWOFG_PER ~ THREEFG_PER + Position, euroleaguePlayers_average)
+ ggplot(euroleaguePlayers_average, aes(THREEFG_PER, TWOFG_PER))+ geom_point(shape="x",color="blue", na.rm = TRUE) + theme_bw() + geom_abline(aes(intercept = coef(model2)[1], slope = coef(model2)[2]), colour = "red")
+```
+
+## Συσχετίσεις,SSE και R-Squared
+```{r}
+cor(euroleaguePlayers_average$TWOFG_PER,euroleaguePlayers_average$THREEFG_PER, use = "complete.obs")
+cor(euroleaguePlayers_average$TWOFG_PER,euroleaguePlayers_average$FT_PER, use = "complete.obs")
+cor(euroleaguePlayers_average$FT_PER,euroleaguePlayers_average$THREEFG_PER, use = "complete.obs")
+SSE1 <- sum(model1$residuals^2)
+SSE1
+SSE2 <- sum(model2$residuals^2)
+SSE2
+summary(model1)$r.squared
+summary(model2)$r.squared
+```
+
+## Σχολιασμός
+
+Στην γραμμική παλινδρόμηση με μία μεταβλητή παρατηρούμε ότι όσο αυξάνεται η τιμή της μεταβλητής THREEFG_PER τοσό αυξάνεται και της μεταβλητής TWOFG_PER. Στην γραμμική παλινδρόμηση με δύο μεταβλητές παρατηρούμε ότι η ευθεία μετατοπίστηκε προς τα πάνω και αυτό δικαιολογείται από την μείωση της τιμής του SSE αλλά και από την αύξηση της τιμής του R-Squared. Επομένως, με την προσθήκη της μεταβλητής Position το μοντέλο έγινε καλύτερο.  
+
