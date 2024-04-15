@@ -1,0 +1,83 @@
+---
+title: "Εργασία 6"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document: default
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{DejaVuSerif}
+lang: el
+date: "2024-04-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Διαχωρισμός dataset
+
+
+```{r}
+library(caTools)
+library(readr)
+framingham <- read_csv("C:/Users/UserA/Downloads//framingham.csv",show_col_types = FALSE)  
+set.seed(925)
+split <- sample.split(framingham$TenYearCHD,SplitRatio=0.65)
+train <- subset(framingham,split==TRUE)
+test <- subset(framingham,split==FALSE)
+```
+
+Καταχωρίσεις training set:
+
+```{r}
+nrow(train)
+```
+
+Καταχωρίσεις test set:
+
+```{r}
+nrow(test)
+```
+
+## Δημιουργία μοντέλου λογιστικής παλινδρόμησης
+
+
+```{r}
+framinghamLog <- glm(TenYearCHD ~ ., data=framingham, family=binomial)
+```
+
+Συσχετίσεις μεταβλητών:
+
+```{r}
+summary(framinghamLog)
+```
+
+Παρατηρούμε ότι υπάρχουν έξι ανεξάρτητες μεταβλητές οι οποίες έχουν από τουλάχιστον ένα αστέρι, το οποίο σημαίνει ότι είναι σημαντικές για το μοντέλο μας. Αυτές είναι με ένα αστέρι: totChol, με δύο αστέρια: glucose και cigsPerDay, με τρία αστέρια: sysBP, male και age.  
+
+## Διάγραμμα
+
+```{r}
+library(ggplot2)
+ggplot(train, aes(age, male)) + 
+         geom_point() +
+         geom_smooth(method = "glm", method.args = list(family = "binomial")) +
+         labs(title = "Logistic Regression Plot",
+                         x = "Independent Variable",
+                         y = "Probability") +
+         theme_minimal()
+
+```
+
+## Προβλέψεις στο test set
+
+```{r}
+predictTest <- predict(framinghamLog, type='response', newdata=test)
+```
+
+Το predict μας δείχνει την πιθανότητα εμφάνισης στεφανιαίας νόσου στους ασθενείς την επόμενη δεκαετία.
+
+
+
+
+
