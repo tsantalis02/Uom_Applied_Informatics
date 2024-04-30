@@ -1,0 +1,133 @@
+---
+title: "Εργασία 7"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document: default
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{DejaVuSerif}
+lang: el
+date: "2024-04-22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Άσκηση 005
+
+1. Διερεύνηση του συνόλου δεδομένων
+
+```{r}
+library(ggplot2)
+library(readr)
+euroleaguePlayers_average <- read_csv("F:/Μαθήματα_Στέργιος/Επιχειρηματική_Αναλυτική/Exercises/Exercise_005/euroleaguePlayers_average.csv")
+colnames(euroleaguePlayers_average) <- c('full_name', 'surname', 'name', 'Club', 'Dorsal', 'Position', 'Height', 'Born', 'Nationality', 'G', 'Pts', 'Avg', 'TWOFG', 'TWOFG_PER', 'THREEFG', 'THREEFG_PER', 'FT', 'FT_PER', 'Reb', 'St', 'As', 'Bl')
+ggplot(euroleaguePlayers_average, aes(FT_PER, TWOFG_PER))+geom_point(shape="x",color="red", na.rm = TRUE)
+```
+
+2α. Δημιουργία μοντέλου (γραμμικής) παλινδρόμησης
+
+```{r}
+model1 <- lm(TWOFG_PER ~ THREEFG_PER, euroleaguePlayers_average)
+ggplot(euroleaguePlayers_average, aes(THREEFG_PER, TWOFG_PER))+ geom_point(shape="x",color="blue", na.rm = TRUE) + theme_bw() + geom_abline(aes(intercept = coef(model1)[1], slope = coef(model1)[2]), colour = "red")
+```
+
+2β. Αξιολόγηση μοντέλου παλινδρόμησης 
+
+```{r}
+summary(model1)$r.squared
+SSE1 <- sum(model1$residuals^2)
+SSE1
+```
+
+H τιμή του R-squared μας δείχνει ότι η συσχέτιση μεταξύ της μεταβλητής TWOFG_PER και της ανεξάρτητης μεταβλητής THREEFG_PER είναι πολύ χαμηλή.
+
+```{r}
+RMSE <- sqrt(SSE1/nrow(euroleaguePlayers_average))
+RMSE
+mean(euroleaguePlayers_average$TWOFG_PER, na.rm = TRUE)
+```
+
+Κατα μέσο όρο έχουμε σφάλμα 16.38 % για τις προσπάθειες δύο πόντων και ο μέσος όρος του ποσοστού των προσπαθειών δύο πόντων είναι 48.33% το οποίο φαίνεται πολύ αλλά δεν είναι.
+
+2γ. Τροποποίηση μοντέλου παλινδρόμησης
+
+```{r}
+ model2 <- lm(TWOFG_PER ~ THREEFG_PER + Position, euroleaguePlayers_average)
+ ggplot(euroleaguePlayers_average, aes(THREEFG_PER, TWOFG_PER))+ geom_point(shape="x",color="blue", na.rm = TRUE) + theme_bw() + geom_abline(aes(intercept = coef(model2)[1], slope = coef(model2)[2]), colour = "red")
+ summary(model2)
+```
+
+Αξιολόγηση μοντέλου
+
+```{r}
+summary(model2)$r.squared
+SSE2 <- sum(model2$residuals^2)
+SSE2
+RMSE2 <- sqrt(SSE2/nrow(euroleaguePlayers_average))
+RMSE2
+mean(euroleaguePlayers_average$TWOFG_PER, na.rm = TRUE)
+```
+Παρατηρούμε ότι με την προσθήκη τη μεταβλητής Position βελτιώθηκε το μοντέλο καθώς αυξήθηκε το R-squared και μειώθηκαν το SSE και το RMSE.
+
+## Άσκηση 006
+
+1. Διερεύνηση του συνόλου δεδομένων
+
+```{r}
+library(caTools)
+library(readr)
+framingham <- read_csv("F:/Μαθήματα_Στέργιος/Επιχειρηματική_Αναλυτική/Exercises/Exercise_006/framingham.csv",show_col_types = FALSE)  
+set.seed(25)
+split <- sample.split(framingham$TenYearCHD,SplitRatio=0.65)
+train <- subset(framingham,split==TRUE)
+test <- subset(framingham,split==FALSE)
+```
+
+Καταχωρίσεις training set:
+
+```{r}
+nrow(train)
+```
+
+Καταχωρίσεις test set:
+
+```{r}
+nrow(test)
+```
+
+2α. Δημιουργία μοντέλου (λογιστικής) παλινδρόμησης
+
+```{r}
+framinghamLog <- glm(TenYearCHD ~ ., data=framingham, family=binomial)
+```
+
+2β. Αξιολόγηση μοντέλου
+
+```{r}
+summary(framinghamLog)
+```
+
+3. Εφαρμογή πρόβλεψης
+
+```{r}
+predictTest <- predict(framinghamLog, type='response', newdata=test)
+summary(predictTest)
+table(test$TenYearCHD, predictTest > 0.5)
+```
+
+Area Under the Curve (AUC)
+
+```{r}
+library(ROCR)
+train2 = na.omit(train)
+test2 = na.omit(test)
+framinghamLog2 = glm(TenYearCHD ~ ., data = train2, family = binomial)
+predictTest2 = predict(framinghamLog2, type = "response", newdata = test2)
+ROCRpred2 <- prediction(predictTest2, test2$TenYearCHD)
+ROCRperf2 <- performance(ROCRpred2, 'tpr', 'fpr')
+plot(ROCRperf2,colorize = TRUE, print.cutoffs.at=seq(0,1,0.1),text.adj=c(-0.2,1.7))
+as.numeric(performance(ROCRpred2, "auc")@y.values)
+```
