@@ -1,0 +1,45 @@
+---
+title: "Εργασία 9"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document: default
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{DejaVuSerif}
+lang: el
+date: "2024-05-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Διερεύνηση συνόλου δεδομένων
+
+
+
+```{r}
+library(readr)
+airtraffic <- read_csv("https://query.data.world/s/vn6i4q4nfumfsdvrthabatxg25otdd?dws=00000", show_col_types = FALSE)
+airtraffic$`Operating Airline IATA Code` = NULL
+airtraffic$`Published Airline IATA Code` = NULL
+airtraffic$Month = NULL
+airtraffic$Year = NULL
+airtraffic = unique(airtraffic)
+summary(airtraffic)
+```
+
+## Ιεραρχική συσταδοποίηση
+
+```{r}
+distances = dist(airtraffic[1:12], method = "euclidean")
+clusterAirtraffic = hclust(distances, method = "ward.D2")
+plot(clusterAirtraffic)
+```
+
+```{r}
+clusterGroups = cutree(clusterAirtraffic, k = 10)
+cluster1 = subset(airtraffic , clusterGroups == 3)
+View(cluster1)
+```
